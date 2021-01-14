@@ -1,4 +1,4 @@
-Asalaamu 'alaykum Jedi Masters!
+Asalaamu 'alaykum!
 
 We are group 'Yusra's Champions (Junaid is okay... I guess)' and these are our answers to your questions. 
 
