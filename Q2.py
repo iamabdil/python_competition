@@ -2,22 +2,23 @@
 Question 2: Given a string check if its characters can be permuted into a palindrome, a palindrome is word that is the same forward and backward, for example “aabaa”
 
 Args:
-    input: string to be checked
+    input_string: string to be checked
 
 Returns:
     Boolean: True if palindrome, False if not
 '''
 
 palim = 'mum'
-def is_palindrome(input):
+def is_palindrome(input_string):
     #removing the whitespace between the characters
-    input = input.replace(" ", "")
+    input_string = input_string.replace(" ", "")
     #convert everything to the lower case
-    input = input.lower()
+    input_string = input_string.lower()
     d = dict()
 
     #looping through the string to check if character is present in the dict
-    for i in input:
+
+    for i in input_string:
         #if it is in the dictionary increment the value of the key by 1
         if i in d:
             d[i]+= 1

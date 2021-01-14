@@ -32,18 +32,14 @@ def lengths():
     result = stats.pearsonr(a, b)
     return result
 
-# function that returns correlations between all variables
-# def correlations():
-#     result = np.corrcoef(df.T)
-#     return result
-
-# print(correlations())
-
+# function returning correlation between all values
 def correlations():
-   n_arr = df.corr().to_numpy() #finds the correlation b/w the columns and then converts to numpy array
-   corcef = np.corrcoef(n_arr) #finds the correlation coeff
-   all_cor = pd.DataFrame(corcef, index=['sepal.length','sepal.width','petal.length','petal.width'], columns=['sepal.length','sepal.width','petal.length','petal.width']) #converts back to dataframe to show matrix of the corrcoeff
-   return all_cor
+    #finds the correlation b/w the columns and then converts to numpy array
+    n_arr = df.corr().to_numpy() 
+    # finds the correlation coeff
+    corcef = np.corrcoef(n_arr) 
+    all_cor = pd.DataFrame(corcef, index=['sepal.length','sepal.width','petal.length','petal.width'], columns=['sepal.length','sepal.width','petal.length','petal.width']) #converts back to dataframe to show matrix of the corrcoeff
+    return all_cor
 
 print(correlations())
 

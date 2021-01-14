@@ -12,12 +12,7 @@ Returns:
 sorted_list = sorted([10, 5, 1, 1, 2, 6, 9])
 
 def abracadabra(list):
-    # empty list to append magic indexes
-    magic = []
-    # looping through list and appending indexes that equal number
-    for index, nums in enumerate(sorted_list):
-        if nums == index:
-            magic.append(nums)
+    magic = [num for index, num in enumerate(sorted_list) if num == index]
     return magic
 
 def main():
