@@ -18,14 +18,17 @@ import numpy as np
 def summary(filename):
     # read the file
     f = open(filename, "r")
+    # splitting the file content by lines
     str_numbers = f.read().splitlines()
     numbers = []
+    # looping through numbers and appending them to numbers list
     for num in str_numbers:
         try:
             numbers.append(float(num))
         except:
             pass
 
+    # calculations  
     total_sum = sum(numbers)
     average = total_sum/len(numbers)
     stddev = np.std(numbers)

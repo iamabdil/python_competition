@@ -12,20 +12,25 @@ Returns:
 the_string = "abd 123 1.2 test 13.2 -1"
 
 def extract_numbers(string):
+    # splitting the string
     string = string.split()
     numbers = []
 
+    # attempting to convert each item to an integer
     for i in string:
         num = None
 
         try:
             num = int(i)
+        # if conversion not possible, raise a value error
         except ValueError:
             pass
-
+        
+    # attempting to convert each item to an float
         if not num:
             try:
                 num = float(i)
+        # if conversion not possible, raise a value error
             except ValueError:
                 pass
 

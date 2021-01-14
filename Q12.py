@@ -10,9 +10,11 @@ Returns:
 import numpy as np
 
 def vector_lengths(x):
+    # euxlidean norm calculation
     return np.sqrt((x**2).sum(axis=1))
 
 def main():
+    # testing function with 3x3 matric
     two_dim_array = np.array([[5, 2, 7], [7, 3, 5], [3, 1, 9]])
     print(vector_lengths(two_dim_array))
 

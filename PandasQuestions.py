@@ -213,19 +213,52 @@ def date_of_birth():
     return customer_df
 
 date_of_birth()
-print(customer_df[['Customer', 'DOB']])
+
+# print(customer_df[['Customer', 'DOB']])
 
 '''
 Question 30: In the most recent customer table, assign a column which tells us which astrology star sign each customer is.
 '''
 
+def horoscope(day, month):
+    # assigning zodiac signs for each date range
+    if month == 'december':
+        astro_sign = 'Sagittarius' if (day < 22) else 'capricorn'
+    elif month == 'january':
+        astro_sign = 'Capricorn' if (day < 20) else 'aquarius'
+    elif month == 'february':
+        astro_sign = 'Aquarius' if (day < 19) else 'pisces'
+    elif month == 'march':
+        astro_sign = 'Pisces' if (day < 21) else 'aries'
+    elif month == 'april':
+        astro_sign = 'Aries' if (day < 20) else 'taurus'
+    elif month == 'may':
+        astro_sign = 'Taurus' if (day < 21) else 'gemini'
+    elif month == 'june':
+        astro_sign = 'Gemini' if (day < 21) else 'cancer'
+    elif month == 'july':
+        astro_sign = 'Cancer' if (day < 23) else 'leo'
+    elif month == 'august':
+        astro_sign = 'Leo' if (day < 23) else 'virgo'
+    elif month == 'september':
+        astro_sign = 'Virgo' if (day < 23) else 'libra'
+    elif month == 'october':
+        astro_sign = 'Libra' if (day < 23) else 'scorpio'
+    elif month == 'november':
+        astro_sign = 'scorpio' if (day < 22) else 'sagittarius'
+    return(astro_sign)
+
+customer_df['DOB']= pd.to_datetime(customer_df['DOB'])
+customer_df['star_sign'] = customer_df['DOB'].apply(lambda customer_df: horoscope(customer_df.day, customer_df.strftime("%B").lower()))
+
+print(customer_df)
+
 '''
 Question 31: Consider the rectangles dataset, read it in, compute the area of each rectangle and save the file to CSV called 'rectangles_new'.
 '''
-# rectangles_df['area'] = rectangles_df['height']*rectangles_df['width']
-# rectangles_df.to_csv('rectangles_new.csv')
 
-
+rectangles_df['area'] = rectangles_df['height']*rectangles_df['width']
+rectangles_df.to_csv('rectangles_new.csv')
 
 
 '''

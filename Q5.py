@@ -14,6 +14,7 @@ def sub_sets(sset):
         return subsetsRecur([], sorted(sset))
     
 def subsetsRecur(current, sset):
+    # using recursion to generate subsets for a given list of numbers
     if sset:
         return subsetsRecur(current, sset[1:]) + subsetsRecur(current + [sset[0]], sset[1:])
     return [current]

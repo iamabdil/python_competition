@@ -10,19 +10,27 @@ Returns:
 
 palim = 'mum'
 def is_palindrome(input):
+    #removing the whitespace between the characters
     input = input.replace(" ", "")
+    #convert everything to the lower case
     input = input.lower()
     d = dict()
 
+    #looping through the string to check if character is present in the dict
     for i in input:
+        #if it is in the dictionary increment the value of the key by 1
         if i in d:
             d[i]+= 1
         else:
             d[i] = 1
+    # keeping track of how many odd elements encountered in the dict, this is imp to check that at most the contents of dict will have 1 odd value
     odd_count = 0
+    #looping through the keys and values in the dictionary
     for k,v in d.items():
+        #if value is odd and the odd count is zero
         if v % 2 != 0 and odd_count == 0:
             odd_count += 1
+        # if value is also odd but odd count is not zero
         elif v % 2 != 0 and odd_count != 0:
             return False
     return True
