@@ -9,10 +9,6 @@ Q15: Make function powers_of_series that takes a Series and a positive integer k
 	b  2   4   8
 	c  3   9  27
 
-Args:
-
-Returns:
-
 '''
 
 import pandas as pd

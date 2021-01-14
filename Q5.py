@@ -1,10 +1,5 @@
 '''
 Question 5: Write a method that returns all subset of a set of numbers, don’t use builtin functions.
-
-Args:
-
-Returns:
-
 '''
 
 set_nums = {0, 1, 2, 3}

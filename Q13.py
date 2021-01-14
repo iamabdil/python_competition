@@ -6,10 +6,6 @@
 #  [0 2 4 6]
 #  [0 3 6 9]]
 
-Args:
-
-Returns:
-
 '''
 
 import numpy as np

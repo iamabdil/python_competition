@@ -10,10 +10,6 @@ petal width (cm)
 
 	Note the input formats of both functions pearsonr and corrcoef.
 
-Args:
-
-Returns:
-
 '''
 
 import pandas as pd

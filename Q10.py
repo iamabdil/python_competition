@@ -7,9 +7,6 @@ Summary Function:
     
     Returns:
         total_sum, average, stddev
-
-Main Function:
-
 '''
 
 import sys

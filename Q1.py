@@ -1,11 +1,7 @@
 '''
 # Q1: Compute Product of two non-negative numbers without arithmetic operator. You are only allowed to use: bitwise operators <<, >>, |, &, ~, ^.
-
-Args:
-
-Returns:
-
 '''
+
 # multiplying using the russian peasant algorithm; double first number and halve second number repeatedly till the second number isnt 1. When second number (b) becomes odd, add first number (a) to the 'product'
 def multiply_bitwise(a, b):   
     # initialize product
